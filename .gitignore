@@ -1,0 +1,6 @@
+result
+result-*
+.direnv/
+secrets/secrets.yaml
+.sops.yaml
+*.agekey

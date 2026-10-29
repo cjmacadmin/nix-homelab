@@ -1,0 +1,4 @@
+# Illustrative only; replace with a newly generated recipient in private config.
+# creation_rules:
+#   - path_regex: secrets/secrets\.yaml$
+#     age: age1REPLACE_WITH_NEW_PUBLIC_RECIPIENT
