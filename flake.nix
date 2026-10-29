@@ -12,10 +12,11 @@
       inventory = import ./hosts.nix;
       mkLinux = name: host: nixpkgs.lib.nixosSystem {
         system = host.system;
-        specialArgs = { inherit host; };
+        specialArgs = { host = host // { inherit name; }; };
         modules = [
           ./modules/nixos/common.nix
           ./modules/nixos/roles.nix
+          ./modules/nixos/longhorn.nix
           ./modules/nixos/remote-builder.nix
           ./hosts/${name}/configuration.nix
           home-manager.nixosModules.home-manager

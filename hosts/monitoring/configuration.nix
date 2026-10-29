@@ -1,4 +1,5 @@
 { ... }: {
   networking.hostName = "monitoring";
-  # Monitoring is local-only until a private access path is deliberately added.
+  services.uptime-kuma = { enable = true; settings = { HOST = "127.0.0.1"; PORT = "3001"; }; };
+  services.qemuGuest.enable = true;
 }

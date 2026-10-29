@@ -1,4 +1,5 @@
 { ... }: {
   networking.hostName = "laptop";
-  # Darwin builds require an appropriate Darwin builder; Linux is not one.
+  system.defaults.dock.autohide = true;
+  system.defaults.finder.AppleShowAllExtensions = true;
 }

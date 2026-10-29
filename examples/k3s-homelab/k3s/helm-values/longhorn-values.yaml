@@ -1,0 +1,4 @@
+# Example values for a separately installed, version-pinned Longhorn chart.
+defaultSettings:
+  defaultDataPath: /var/lib/longhorn
+  defaultReplicaCount: 2

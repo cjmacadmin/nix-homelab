@@ -2,7 +2,7 @@
 
 The example models a dedicated x86_64 Linux builder separate from application and hypervisor management. The requesting machine evaluates a derivation, its Nix daemon dispatches compatible builds over SSH, and the target remains responsible for activation. `modules/nixos/remote-builder.nix` is opt-in and disabled for every host. Its address and key path are placeholders. There is no configured shared binary cache or automatic fleet deployment.
 
-The underlying real builder work is in progress: a dedicated VM and a Linux system closure were tested; a restricted remote account and end-to-end daemon dispatch/activation were not yet verified. The example is an architectural template, not a claim that every host already uses it.
+The builder account is declared as a trusted Nix user but has no authorized SSH keys by default. Configure and verify restricted access and end-to-end daemon dispatch before enabling client integration. The example is an architectural template, not a claim that every host already uses it.
 
 ## Before enabling on a Linux client
 
